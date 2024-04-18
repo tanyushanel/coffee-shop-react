@@ -1,13 +1,270 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+:root {
+  /* COLOR VARIABLES */
+  --text-dark-color: rgb(65, 63, 61);
+  --text-light-color: rgb(225, 212, 201);
+  --text-accent-color: rgb(176, 144, 122);
+
+  --bg-body-color: rgb(225, 212, 201);
+  --bg-container-color: rgb(102, 95, 85);
+  --bg-backdrop-color: rgb(103, 101, 100);
+
+  --border-light-color: rgb(193, 182, 173);
+  --border-dark-color: rgb(102, 95, 85);
+}
+
+/* DINAMIC CLASSES */
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+/* FORMAT CLASSES */
+
+.margin-100 {
+  margin: 100px 0;
+}
+
+.margin-15 {
+  margin: 15px 0;
+}
+
+.margin-20 {
+  margin: 20px 0;
+}
+
+.margin-30 {
+  margin: 30px 0;
+}
+
+.margin-40 {
+  margin: 40px 0;
+}
+
+.gap-8 {
+  gap: 8px;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+.gap-12 {
+  gap: 12px;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.gap-40 {
+  gap: 40px;
+}
+
+.gap-100 {
+  gap: 100px;
+}
+
+.center {
+  text-align: center;
+  justify-content: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.accent-txt {
+  font-style: italic;
+  color: var(--text-accent-color);
+}
+
+.medium-txt {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.caption-txt {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.light-color {
+  color: var(--text-light-color);
+}
+
+.dark-color {
+  color: var(--text-dark-color);
+}
+
+.bg-fill-light {
+  background: var(--bg-body-color);
+}
+
+.bg-fill-dark {
+  background: var(--bg-container-color);
+}
+
+.button-primary {
+  padding: 1.25rem 5rem;
+  border-radius: 100px;
+}
+
+.button-secondary {
+  cursor: pointer;
+  color: var(--border-dark-color);
+  border: 1px solid var(--border-dark-color);
+  border-radius: 100px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* GENERAL STYLES */
+
+.container {
+  position: relative;
+  height: 100vh;
+  padding: 0 2.5rem;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-body-color);
+  color: var(--text-dark-color);
+}
+
+h1.invisible {
+  position: absolute;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+h2 {
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 105%;
+}
+
+h3 {
+  font-size: 3.75rem;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+h3.center {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+li {
+  display: inline-block;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+a,
+button {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 150%;
+  color: inherit;
+}
+
+.contacts-heading {
+  width: 530px;
+}
+
+.social-button {
+  border: 1px solid var(--border-light-color);
+  border-radius: 100px;
+  height: 3.75rem;
+  width: 3.75rem;
+}
+
+.social-button img {
+  object-fit: contain;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.contacts-desc li {
+  align-items: baseline;
+}
+
+.material-symbols-outlined {
+  cursor: pointer;
+  color: var(--text-dark-color);
+}
+
+@media (hover: hover) and (any-hover: hover) {
+  .button-primary,
+  .button-secondary {
+    cursor: pointer;
+  }
 }

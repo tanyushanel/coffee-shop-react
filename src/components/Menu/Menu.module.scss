@@ -1,0 +1,62 @@
+.menuBox {
+  display: inline-flex;
+  flex-basis: 100%;
+  justify-content: center;
+}
+
+.menuItems {
+  display: flex;
+  gap: 3rem;
+}
+
+.menuItem {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.burgerMenuButton {
+  display: none;
+}
+
+.burgerMenuLink {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+@media (hover: hover) and (any-hover: hover) {
+  .menuItem:hover {
+    transform: scale(1.1);
+    transition: ease-in-out 0.25s;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .burgerMenuButton {
+    display: inline-flex;
+    color: var(--light-text);
+    margin: 1rem;
+    cursor: pointer;
+    z-index: 10;
+    justify-content: end;
+  }
+
+  .menuBox {
+    display: inline-flex;
+    width: 100%;
+    height: 100vh;
+    background: var(--darker-text-opacity);
+    flex-direction: column;
+    color: var(--light-text);
+    font-size: 2rem;
+  }
+
+  .menuItems {
+    position: absolute;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+  }
+}
