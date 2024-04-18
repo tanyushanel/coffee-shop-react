@@ -18,7 +18,7 @@ export const Intro = () => {
           seeking a warm and inviting space to enjoy their favorite beverage.
         </p>
 
-        <span
+        <b
           className={cx(
             style.bannerButton,
             "flex-center gap-10 button-primary bg-fill-light"
@@ -28,7 +28,7 @@ export const Intro = () => {
           <span className={cx(style.icon, "material-symbols-outlined")}>
             coffee
           </span>
-        </span>
+        </b>
       </div>
     </div>
   );

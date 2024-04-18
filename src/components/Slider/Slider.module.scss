@@ -13,16 +13,16 @@
 .slide {
   transform: translateX(0);
   transition: transform 1s ease-out;
-}
 
-.next {
-  transform: translateX(100%);
-  transition: transform 1s ease-out;
-}
+  .next {
+    transform: translateX(100%);
+    transition: transform 1s ease-out;
+  }
 
-.back {
-  transform: translateX(-100%);
-  transition: transform 1s ease-out;
+  .back {
+    transform: translateX(-100%);
+    transition: transform 1s ease-out;
+  }
 }
 
 .sliderControl {

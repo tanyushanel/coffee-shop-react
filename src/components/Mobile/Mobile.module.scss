@@ -1,0 +1,41 @@
+.mobilePresentation {
+  justify-content: center;
+}
+
+.mobileImg {
+  width: 630px;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.storeButtonContainer {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  .storeButton {
+    padding: 12px 20px;
+    height: 64px;
+    width: 200px;
+  }
+}
+
+.buttonDesc span {
+  display: block;
+}
+
+@media (hover: hover) and (any-hover: hover) {
+  .storeButton:hover img {
+    filter: invert(94%) sepia(9%) saturate(435%) hue-rotate(332deg)
+      brightness(90%) contrast(96%);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .mobilePresentation {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+}
