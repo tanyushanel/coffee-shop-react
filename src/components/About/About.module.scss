@@ -1,0 +1,36 @@
+.gridContainer {
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.gridItem {
+  border-radius: 20px;
+  max-width: 41.25rem;
+  overflow: hidden;
+
+  &:nth-child(3n + 1) {
+    max-height: 590px;
+  }
+
+  &:not(:nth-child(3n + 1)) {
+    max-height: 430px;
+  }
+
+  .scalable {
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.1);
+  }
+
+  & .scalable:hover {
+    object-fit: cover;
+    transform: none;
+    transition: ease-in-out 0.5s;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .gridContainer {
+    flex-flow: column wrap;
+    height: 1060px;
+  }
+}

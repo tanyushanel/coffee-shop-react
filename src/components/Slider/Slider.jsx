@@ -4,7 +4,10 @@ import cx from "classnames";
 
 export const Slider = () => {
   return (
-    <article id="slider" className={cx(style.sliderContainer, "center")}>
+    <article
+      id="slider"
+      className={cx(style.sliderContainer, "center margin-100")}
+    >
       <h3>
         Choose your <span className="accent-txt">favorite</span> coffee
       </h3>
@@ -42,7 +45,7 @@ export const Slider = () => {
           <span className="material-symbols-outlined"> arrow_forward </span>
         </button>
       </div>
-      <div className={cx(style.sliderControl, "flex-center gap-10")}>
+      <div className="flex-center gap-10">
         <p className={cx(style.sliderControl, style.sliderControl.active)}>
           <span></span>
         </p>
