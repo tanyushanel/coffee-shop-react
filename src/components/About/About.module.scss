@@ -16,15 +16,15 @@
   }
 
   .scalable {
+    height: 100%;
+    width: 100%;
     object-fit: cover;
-    object-position: center;
     transform: scale(1.1);
   }
 
   & .scalable:hover {
-    object-fit: cover;
     transform: none;
-    transition: ease-in-out 0.5s;
+    transition: ease-in 0.5s;
   }
 }
 
