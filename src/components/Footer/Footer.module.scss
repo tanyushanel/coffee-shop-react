@@ -8,19 +8,6 @@
   width: 530px;
 }
 
-.socialButton {
-  border: 1px solid var(--border-light-color);
-  border-radius: 100px;
-  height: 3.75rem;
-  width: 3.75rem;
-
-  img {
-    object-fit: contain;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-}
-
 .contactsDesc li {
   align-items: baseline;
 }
@@ -29,26 +16,24 @@
   .contactsDesc li > a:hover {
     box-shadow: 0px 2px 0px 0px var(--text-light-color);
   }
+}
 
-  .socialButton:hover {
-    background: var(--bg-body-color);
-    transition: background 0.5s ease-in-out;
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 100px 60px;
+    gap: 25px;
   }
+}
 
-  .socialButton:hover img {
-    filter: invert(26%) sepia(7%) saturate(10%) hue-rotate(359deg)
-      brightness(90%) contrast(92%);
+@media screen and (min-width: 381px) and (max-width: 767px) {
+  .footer {
+    padding: 60px;
+    gap: 25px;
   }
+}
 
-  @media (hover: none) {
-    .socialButton.click {
-      background: var(--bg-body-color);
-      transition: background 0.5s ease;
-
-      img {
-        filter: invert(26%) sepia(7%) saturate(10%) hue-rotate(359deg)
-          brightness(90%) contrast(92%);
-      }
-    }
+@media screen and (max-width: 380px) {
+  .footer {
+    gap: 0;
   }
 }

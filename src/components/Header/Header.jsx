@@ -1,17 +1,18 @@
 import style from "./Header.module.scss";
-import { Menu } from "./../Menu/Menu";
+import { Navbar } from "../Navbar/Navbar";
 import { Cart } from "./../Cart/Cart";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
-    <header>
+    <header className={style.header}>
       <div className={style.headerContent}>
         <h1 className="invisible">Resource Coffee House</h1>
-        <a href="index.html">
+        <Link to="/">
           <img className="logo" src="/assets/icons/logo.svg" alt="logo" />
-        </a>
+        </Link>
 
-        <Menu />
+        <Navbar />
         <Cart />
       </div>
     </header>

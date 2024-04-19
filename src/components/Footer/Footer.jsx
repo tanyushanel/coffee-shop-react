@@ -1,3 +1,4 @@
+import { SocialBar } from "../Socialbar/SocialBar";
 import style from "./Footer.module.scss";
 
 import cx from "classnames";
@@ -13,25 +14,9 @@ export const Footer = () => {
       <article id="contact" className={style.contactHeading}>
         <h3 className="light-color">
           Sip, Savor, Smile.
-          <span className="accent-txt">It’s coffee time! </span>
+          <span className="accent-txt"> It’s coffee time! </span>
         </h3>
-        <div className={cx("flex social-button-container margin-40 gap-12")}>
-          <button
-            className={cx(style.socialButton, "flex-center button-secondary")}
-          >
-            <img src="assets/icons/tweet.svg" alt="tweet-pic" />
-          </button>
-          <button
-            className={cx(style.socialButton, "flex-center button-secondary")}
-          >
-            <img src="assets/icons/instagram.svg" alt="inst-pic" />
-          </button>
-          <button
-            className={cx(style.socialButton, "flex-center button-secondary")}
-          >
-            <img src="assets/icons/fb.svg" alt="fb-pic" />
-          </button>
-        </div>
+        <SocialBar />
       </article>
 
       <div className={style.contactsDesc}>

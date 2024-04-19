@@ -1,5 +1,6 @@
 import style from "./Intro.module.scss";
 import cx from "classnames";
+import { Link } from "react-router-dom";
 
 export const Intro = () => {
   return (
@@ -18,7 +19,8 @@ export const Intro = () => {
           seeking a warm and inviting space to enjoy their favorite beverage.
         </p>
 
-        <b
+        <Link
+          to="/menu"
           className={cx(
             style.bannerButton,
             "flex-center gap-10 button-primary bg-fill-light"
@@ -28,7 +30,7 @@ export const Intro = () => {
           <span className={cx(style.icon, "material-symbols-outlined")}>
             coffee
           </span>
-        </b>
+        </Link>
       </div>
     </div>
   );

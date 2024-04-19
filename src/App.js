@@ -1,19 +1,15 @@
-import { Header } from "./components/Header/Header";
-import { Intro } from "./components/Intro/Intro";
-import { Slider } from "./components/Slider/Slider";
-import { About } from "./components/About/About";
-import { Mobile } from "./components/Mobile/Mobile";
-import { Footer } from "./components/Footer/Footer";
+import { Route, Routes } from "react-router-dom";
+import { Menu } from "./pages/Menu/Menu";
+import { Home } from "./pages/Home/Home";
 
 function App() {
   return (
     <div className="container">
-      <Header />
-      <Intro />
-      <Slider />
-      <About />
-      <Mobile />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/menu" element={<Menu />} />
+        {/* <Route path="/contact" element={<Contact />} /> */}
+      </Routes>
     </div>
   );
 }

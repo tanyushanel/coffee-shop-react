@@ -15,6 +15,7 @@
 
 .bannerButton {
   display: inline-flex;
+  font-weight: 700;
 }
 
 .video {
@@ -26,4 +27,32 @@
 
 .button-primary {
   display: inline-flex;
+}
+
+@media screen and (max-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding: 20px 40px;
+  }
+
+  .bannerDesc {
+    max-width: 530px;
+    margin: 100px 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bannerDesc {
+    margin: 60px calc(20px + (40 - 16) * ((100vw - 381px) / (767 - 381)));
+  }
+
+  .bannerButton.button-primary {
+    padding: 1em 4em;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .bannerDesc {
+    margin: 60px calc(20px + (40 - 16) * ((100vw - 381px) / (767 - 381)));
+  }
 }

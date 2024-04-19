@@ -156,15 +156,6 @@ code {
 
 /* GENERAL STYLES */
 
-.container {
-  position: relative;
-  height: 100vh;
-  padding: 0 2.5rem;
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -173,13 +164,19 @@ code {
 
 html,
 body {
-  height: 100vh;
   scroll-behavior: smooth;
 }
 
 body {
   background: var(--bg-body-color);
   color: var(--text-dark-color);
+}
+
+.container {
+  position: relative;
+  padding: 0 2.5rem;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 h1.invisible {
@@ -236,27 +233,6 @@ button {
   color: inherit;
 }
 
-.contacts-heading {
-  width: 530px;
-}
-
-.social-button {
-  border: 1px solid var(--border-light-color);
-  border-radius: 100px;
-  height: 3.75rem;
-  width: 3.75rem;
-}
-
-.social-button img {
-  object-fit: contain;
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.contacts-desc li {
-  align-items: baseline;
-}
-
 @media (hover: hover) and (any-hover: hover) {
   .button-primary,
   .button-secondary {
@@ -280,5 +256,110 @@ button {
   .button-secondary.click img {
     filter: invert(94%) sepia(9%) saturate(435%) hue-rotate(332deg)
       brightness(90%) contrast(96%);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  h4 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .container {
+    max-width: 1439px;
+    padding: 20px 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 20px 40px;
+    overflow-x: hidden;
+  }
+
+  .grid-container {
+    max-height: 1220px;
+    overflow: hidden;
+  }
+
+  .grid-container .grid-item {
+    border-radius: 20px;
+    min-height: 590px;
+    min-width: 100%;
+  }
+
+  .grid-menu-container {
+    padding: 0 10px;
+    overflow: hidden;
+  }
+
+  .bttn-refresh {
+    display: flex;
+    margin: 40px auto;
+  }
+
+  .bttn-refresh.hide {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: calc(42px + (42 - 24) * ((100vw - 381px) / (767 - 381)));
+  }
+
+  h3 {
+    font-size: calc(32px + (32 - 24) * ((100vw - 381px) / (767 - 381)));
+  }
+
+  .container {
+    padding: 20px calc(16px + (40 - 16) * ((100vw - 381px) / (767 - 381)));
+  }
+}
+
+@media screen and (max-width: 380px) {
+  h2 {
+    font-size: 2.625rem;
+    font-weight: 600;
+    line-height: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.875rem;
+  }
+  .container {
+    max-width: 380px;
+    width: 380px;
+    padding: 20px 16px;
+  }
+
+  .tab-item {
+    padding: 8px;
+    padding-right: 16px;
+  }
+
+  .tab-container {
+    gap: 8px;
+  }
+
+  .grid-menu-container {
+    padding: 0 10px;
+    max-height: 2144px;
+    overflow: hidden;
+  }
+
+  .grid-container .grid-item {
+    flex-direction: column;
+    min-height: 590px;
   }
 }

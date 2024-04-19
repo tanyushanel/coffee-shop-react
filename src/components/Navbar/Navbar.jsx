@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import cx from "classnames";
-import style from "./Menu.module.scss";
-import { useWindowSize } from "./../../hooks/useWindowSize";
-import { Navigation } from "./../../constants/Navigation";
+import style from "./Navbar.module.scss";
+import { useWindowSize } from "../../hooks/useWindowSize";
+import { Navigation } from "../../constants/Navigation";
+import { Link } from "react-router-dom";
 
-export const Menu = () => {
+export const Navbar = () => {
   const nav = Object.values(Navigation);
 
   const { width } = useWindowSize();
