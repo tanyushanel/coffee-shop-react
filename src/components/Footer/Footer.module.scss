@@ -3,3 +3,24 @@
   padding-bottom: 3.75rem;
   border-radius: 40px;
 }
+
+.contactsHeading {
+  width: 530px;
+}
+
+.socialButton {
+  border: 1px solid var(--border-light-color);
+  border-radius: 100px;
+  height: 3.75rem;
+  width: 3.75rem;
+
+  img {
+    object-fit: contain;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.contactsDesc li {
+  align-items: baseline;
+}
