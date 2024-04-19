@@ -34,9 +34,10 @@
 
 @media screen and (max-width: 768px) {
   .burgerMenuButton {
+    position: absolute;
+    right: 0;
     display: inline-flex;
     color: var(--light-text);
-    margin: 1rem;
     cursor: pointer;
     z-index: 10;
     justify-content: end;

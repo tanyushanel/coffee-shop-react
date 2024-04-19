@@ -26,12 +26,6 @@ export const Menu = () => {
   };
   return (
     <nav className={style.menuBox}>
-      <span
-        className={cx("material-symbols-outlined", style.burgerMenuButton)}
-        onClick={onMenuToggle}
-      >
-        menu
-      </span>
       {isMenuOpen && (
         <ul className={style.menuItems}>
           {nav.map(({ href, name }) => {
@@ -45,6 +39,13 @@ export const Menu = () => {
           })}
         </ul>
       )}
+
+      <img
+        className={style.burgerMenuButton}
+        onClick={onMenuToggle}
+        src="assets/icons/button-icon-burger.svg"
+        alt="burger-menu-pic"
+      />
     </nav>
   );
 };

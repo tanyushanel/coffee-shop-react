@@ -24,3 +24,31 @@
 .contactsDesc li {
   align-items: baseline;
 }
+
+@media (hover: hover) {
+  .contactsDesc li > a:hover {
+    box-shadow: 0px 2px 0px 0px var(--text-light-color);
+  }
+
+  .socialButton:hover {
+    background: var(--bg-body-color);
+    transition: background 0.5s ease-in-out;
+  }
+
+  .socialButton:hover img {
+    filter: invert(26%) sepia(7%) saturate(10%) hue-rotate(359deg)
+      brightness(90%) contrast(92%);
+  }
+
+  @media (hover: none) {
+    .socialButton.click {
+      background: var(--bg-body-color);
+      transition: background 0.5s ease;
+
+      img {
+        filter: invert(26%) sepia(7%) saturate(10%) hue-rotate(359deg)
+          brightness(90%) contrast(92%);
+      }
+    }
+  }
+}

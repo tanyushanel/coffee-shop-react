@@ -257,10 +257,6 @@ button {
   align-items: baseline;
 }
 
-.material-symbols-outlined {
-  cursor: pointer;
-}
-
 @media (hover: hover) and (any-hover: hover) {
   .button-primary,
   .button-secondary {
@@ -284,15 +280,5 @@ button {
   .button-secondary.click img {
     filter: invert(94%) sepia(9%) saturate(435%) hue-rotate(332deg)
       brightness(90%) contrast(96%);
-  }
-
-  .social-button.click {
-    background: var(--bg-body-color);
-    transition: background 0.5s ease;
-  }
-
-  .social-button.click img {
-    filter: invert(26%) sepia(7%) saturate(10%) hue-rotate(359deg)
-      brightness(90%) contrast(92%);
   }
 }

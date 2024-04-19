@@ -3,3 +3,9 @@
   gap: 1rem;
   color: var(--border-dark-color);
 }
+
+@media screen and (max-width: 768px) {
+  .shopBox {
+    margin-right: 4rem;
+  }
+}
