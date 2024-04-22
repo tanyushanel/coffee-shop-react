@@ -1,6 +1,7 @@
 import { Layout } from "./../../layouts/Layout";
 import { Tabs } from "./../../components/Tabs/Tabs";
-export const Menu = () => {
+
+const Menu = () => {
   return (
     <Layout>
       <article className="about-container">
@@ -13,3 +14,4 @@ export const Menu = () => {
     </Layout>
   );
 };
+export default Menu;
