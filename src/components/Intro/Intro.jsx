@@ -35,7 +35,7 @@ export const Intro = () => {
           to="/menu"
           className={cx(
             style.bannerButton,
-            "flex-center gap-10 button-primary bg-fill-light"
+            "flex-center gap-10 button-primary button-secondary bg-fill-light"
           )}
         >
           Menu
