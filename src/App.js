@@ -2,9 +2,8 @@ import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Spinner } from "./components/Spinner/Spinner";
 
-import { Menu } from "./pages/Menu/Menu";
-
 const Home = lazy(() => import("./pages/Home/Home"));
+const Menu = lazy(() => import("./pages/Menu/Menu"));
 
 function App() {
   return (
