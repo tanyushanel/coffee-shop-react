@@ -4,7 +4,7 @@ import { Mobile } from "./../../components/Mobile/Mobile";
 import { Slider } from "./../../components/Slider/Slider";
 import { Layout } from "./../../layouts/Layout";
 
-export const Home = () => {
+const Home = () => {
   return (
     <Layout>
       <Intro />
@@ -14,3 +14,4 @@ export const Home = () => {
     </Layout>
   );
 };
+export default Home;

@@ -1,13 +1,25 @@
 import style from "./Intro.module.scss";
 import cx from "classnames";
 import { Link } from "react-router-dom";
+import { lazy, Suspense } from "react";
+import { Spinner } from "./../Spinner/Spinner";
+
+const LazyVideoBackground = lazy(() => {
+  return import("./../IntroBackground/IntroBackground").catch((err) =>
+    console.error("Failed to load VideoBackground", err)
+  );
+});
+
+const VideoLoader = ({ src }) => (
+  <Suspense fallback={<Spinner />}>
+    <LazyVideoBackground src={src} />
+  </Suspense>
+);
 
 export const Intro = () => {
   return (
     <div className={style.bannerContainer}>
-      <video className={style.video} autoPlay loop muted>
-        <source src="assets/video.mp4" type="video/mp4"></source>
-      </video>
+      <VideoLoader src="assets/video.mp4" />
       <div className={style.bannerDesc}>
         <h2 className="light-color">
           <span className="accent-txt">Enjoy</span> premium coffee at our
