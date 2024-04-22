@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcoffee_shop_react=self.webpackChunkcoffee_shop_react||[]).push([[412],{412:(e,o,s)=>{s.r(o),s.d(o,{default:()=>r});const c="IntroBackground_video__aOedQ";var a=s(579);const r=e=>{let{src:o}=e;return(0,a.jsx)("video",{className:c,autoPlay:!0,loop:!0,muted:!0,preload:"auto",children:(0,a.jsx)("source",{src:o,type:"video/mp4"})})}}}]);
+//# sourceMappingURL=412.9cb70a90.chunk.js.map
