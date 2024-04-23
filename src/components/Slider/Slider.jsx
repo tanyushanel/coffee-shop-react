@@ -1,12 +1,41 @@
-import style from "./Slider.module.scss";
-
 import cx from "classnames";
+import { useState } from "react";
+import { Slide } from "./Slide/Slide";
+import style from "./Slider.module.scss";
+import { useSwipeable } from "react-swipeable";
 
-export const Slider = () => {
+export const Slider = ({ slides }) => {
+  const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(0);
+
+  const length = slides.length;
+
+  const nextSlide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+    setDirection(1);
+  };
+
+  const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+    setDirection(0);
+  };
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => nextSlide(),
+    onSwipedRight: () => prevSlide(),
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true,
+  });
+
+  if (!Array.isArray(slides) || slides.length <= 0) {
+    return null;
+  }
+
   return (
     <article
       id="slider"
       className={cx(style.sliderContainer, "center margin-100")}
+      {...handlers}
     >
       <h3>
         Choose your <span className="accent-txt">favorite</span> coffee
@@ -17,23 +46,17 @@ export const Slider = () => {
             style.sliderButton,
             "flex-center previous button-secondary"
           )}
+          onClick={prevSlide}
         >
           <span className="material-symbols-outlined"> arrow_back </span>
         </button>
         <div className={style.sliderContent}>
-          <div className={style.slide}>
-            <img
-              className={style.sliderImg}
-              src="/assets/pics/coffee-slider-1.png"
-              alt="pic"
-            />
-            <h4 className="margin-15">S’mores Frappuccino</h4>
-            <p className="medium-txt margin-15">
-              This new drink takes an espresso and mixes it with brown sugar and
-              cinnamon before being topped with oat milk.
-            </p>
-            <h4 className="price">$5.50</h4>
-          </div>
+          {slides.map(
+            (item, index) =>
+              index === current && (
+                <Slide slide={item} direction={direction} key={index} />
+              )
+          )}
         </div>
         <button
           className={cx(
@@ -41,20 +64,23 @@ export const Slider = () => {
             style.next,
             "flex-center button-secondary"
           )}
+          onClick={nextSlide}
         >
           <span className="material-symbols-outlined"> arrow_forward </span>
         </button>
       </div>
       <div className="flex-center gap-10">
-        <p className={cx(style.sliderControl, style.sliderControl.active)}>
-          <span></span>
-        </p>
-        <p className={style.sliderControl}>
-          <span></span>
-        </p>
-        <p className={style.sliderControl}>
-          <span></span>
-        </p>
+        {slides.map((item, index) => (
+          <p
+            key={index}
+            className={cx(
+              style.sliderControl,
+              index === current && style.active
+            )}
+          >
+            <span></span>
+          </p>
+        ))}
       </div>
     </article>
   );

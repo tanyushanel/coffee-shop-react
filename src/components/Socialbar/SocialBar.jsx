@@ -8,11 +8,12 @@ export const SocialBar = () => {
       >
         <img src="/assets/icons/tweet.svg" alt="tweet-pic" />
       </button>
-      <button
+      <a
+        href="https://www.instagram.com/resourcecoffeeshop/?hl=en"
         className={cx(style.socialButton, "flex-center button-secondary")}
       >
         <img src="/assets/icons/instagram.svg" alt="inst-pic" />
-      </button>
+      </a>
       <button
         className={cx(style.socialButton, "flex-center button-secondary")}
       >
