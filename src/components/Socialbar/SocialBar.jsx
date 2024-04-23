@@ -6,17 +6,17 @@ export const SocialBar = () => {
       <button
         className={cx(style.socialButton, "flex-center button-secondary")}
       >
-        <img src="assets/icons/tweet.svg" alt="tweet-pic" />
+        <img src="/assets/icons/tweet.svg" alt="tweet-pic" />
       </button>
       <button
         className={cx(style.socialButton, "flex-center button-secondary")}
       >
-        <img src="assets/icons/instagram.svg" alt="inst-pic" />
+        <img src="/assets/icons/instagram.svg" alt="inst-pic" />
       </button>
       <button
         className={cx(style.socialButton, "flex-center button-secondary")}
       >
-        <img src="assets/icons/fb.svg" alt="fb-pic" />
+        <img src="/assets/icons/fb.svg" alt="fb-pic" />
       </button>
     </div>
   );

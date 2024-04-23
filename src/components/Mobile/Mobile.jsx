@@ -17,7 +17,7 @@ export const Mobile = () => {
           <button
             className={cx(style.storeButton, "flex button-secondary gap-8")}
           >
-            <img src="assets/icons/app-icon.svg" alt="app-icon" />
+            <img src="/assets/icons/app-icon.svg" alt="app-icon" />
 
             <span className={cx(style.buttonDesc, "left")}>
               <span className="caption-txt">Available on the</span>
@@ -27,7 +27,7 @@ export const Mobile = () => {
           <button
             className={cx(style.storeButton, "flex button-secondary gap-8")}
           >
-            <img src="assets/icons/gp-icon.svg" alt="gp-icon" />
+            <img src="/assets/icons/gp-icon.svg" alt="gp-icon" />
 
             <span className={cx(style.buttonDesc, "left")}>
               <span className="caption-txt">Available on</span>
@@ -37,7 +37,7 @@ export const Mobile = () => {
         </div>
       </div>
       <div className={style.mobileImg}>
-        <img src="assets/pics/mobile-screens.png" alt="mobile-screens" />
+        <img src="/assets/pics/mobile-screens.png" alt="mobile-screens" />
       </div>
     </article>
   );

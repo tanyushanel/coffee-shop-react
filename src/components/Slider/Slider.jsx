@@ -24,7 +24,7 @@ export const Slider = () => {
           <div className={style.slide}>
             <img
               className={style.sliderImg}
-              src="assets/pics/coffee-slider-1.png"
+              src="/assets/pics/coffee-slider-1.png"
               alt="pic"
             />
             <h4 className="margin-15">S’mores Frappuccino</h4>
