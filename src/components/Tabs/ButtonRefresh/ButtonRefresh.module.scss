@@ -1,0 +1,15 @@
+.sliderButton {
+  height: 3.75rem;
+  width: 3.75rem;
+  margin: 40px auto;
+}
+
+@media screen and (max-width: 768px) {
+  .bttnRefresh {
+    display: flex;
+  }
+
+  .bttnRefresh.hide {
+    display: none;
+  }
+}

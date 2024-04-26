@@ -1,0 +1,43 @@
+.gridContainer {
+  flex-direction: column;
+  height: max-content;
+  width: 310px;
+  border: 1px solid var(--border-light-color);
+  border-radius: 20px;
+}
+
+.gridImg {
+  border-radius: 20px;
+  overflow: hidden;
+
+  .scalable {
+    object-fit: cover;
+    transform: scale(1.05);
+  }
+
+  & .scalable:hover {
+    transform: scale(1.09);
+    transition: ease-in 0.5s;
+  }
+}
+
+.gridDesc {
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .gridContainer {
+    max-height: 1220px;
+    overflow: hidden;
+  }
+
+  .gridContainer {
+    border-radius: 20px;
+  }
+
+  .gridMenuContainer {
+    padding: 0 10px;
+    overflow: hidden;
+  }
+}

@@ -14,7 +14,8 @@ export const Mobile = () => {
           your favorite coffee from wherever you are
         </p>
         <div className={cx(style.storeButtonContainer, "flex gap-20")}>
-          <button
+          <a
+            href="https://www.apple.com/pl/app-store/"
             className={cx(style.storeButton, "flex button-secondary gap-8")}
           >
             <img src="/assets/icons/app-icon.svg" alt="app-icon" />
@@ -23,8 +24,9 @@ export const Mobile = () => {
               <span className="caption-txt">Available on the</span>
               <span>App Store</span>
             </span>
-          </button>
-          <button
+          </a>
+          <a
+            href="https://play.google.com/store/"
             className={cx(style.storeButton, "flex button-secondary gap-8")}
           >
             <img src="/assets/icons/gp-icon.svg" alt="gp-icon" />
@@ -33,7 +35,7 @@ export const Mobile = () => {
               <span className="caption-txt">Available on</span>
               <span>Google Play</span>
             </span>
-          </button>
+          </a>
         </div>
       </div>
       <div className={style.mobileImg}>

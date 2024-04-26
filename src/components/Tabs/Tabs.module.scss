@@ -1,27 +1,18 @@
 .tabContainer {
   gap: 8px;
 
-  .tabItem {
-    padding: 8px;
-    padding-right: 16px;
+  & .active {
+    cursor: pointer;
+    color: var(--border-dark-color);
+    border: 1px solid var(--border-dark-color);
+    border-radius: 100px;
   }
 }
 
 .gridMenuContainer {
   padding: 0 10px;
-  max-height: 2144px;
   overflow: hidden;
-}
-
-.gridContainer .gridItem {
-  flex-direction: column;
-  min-height: 590px;
-}
-
-.sliderButton {
-  height: 3.75rem;
-  width: 3.75rem;
-  flex-shrink: 0;
+  flex-flow: row wrap;
 }
 
 @media screen and (max-width: 768px) {
@@ -39,14 +30,5 @@
   .gridMenuContainer {
     padding: 0 10px;
     overflow: hidden;
-  }
-
-  .bttnRefresh {
-    display: flex;
-    margin: 40px auto;
-  }
-
-  .bttnRefresh.hide {
-    display: none;
   }
 }

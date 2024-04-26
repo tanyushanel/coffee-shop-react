@@ -282,31 +282,6 @@ article {
     padding: 0 40px;
     overflow-x: hidden;
   }
-
-  .grid-container {
-    max-height: 1220px;
-    overflow: hidden;
-  }
-
-  .grid-container .grid-item {
-    border-radius: 20px;
-    min-height: 590px;
-    min-width: 100%;
-  }
-
-  .grid-menu-container {
-    padding: 0 10px;
-    overflow: hidden;
-  }
-
-  .bttn-refresh {
-    display: flex;
-    margin: 40px auto;
-  }
-
-  .bttn-refresh.hide {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 768px) {

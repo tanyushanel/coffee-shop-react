@@ -1,23 +1,20 @@
 import cx from "classnames";
 import { useState } from "react";
+import { useSwipeable } from "react-swipeable";
 import { Slide } from "./Slide/Slide";
 import style from "./Slider.module.scss";
-import { useSwipeable } from "react-swipeable";
 
 export const Slider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
-  const [direction, setDirection] = useState(0);
 
   const length = slides.length;
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
-    setDirection(1);
   };
 
   const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
-    setDirection(0);
   };
 
   const handlers = useSwipeable({
@@ -54,7 +51,11 @@ export const Slider = ({ slides }) => {
           {slides.map(
             (item, index) =>
               index === current && (
-                <Slide slide={item} direction={direction} key={index} />
+                <Slide
+                  slide={item}
+                  className={cx(style.slide, style.active)}
+                  key={index}
+                />
               )
           )}
         </div>
