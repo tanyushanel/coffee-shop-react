@@ -18,7 +18,7 @@ const VideoLoader = ({ src }) => (
 
 export const Intro = () => {
   return (
-    <article className={style.bannerContainer}>
+    <article id="intro" className={style.bannerContainer}>
       <VideoLoader src="/assets/video.mp4" />
       <div className={style.bannerDesc}>
         <h2 className="light-color">

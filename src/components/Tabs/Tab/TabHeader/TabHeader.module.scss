@@ -1,0 +1,11 @@
+.tabHeader {
+  padding: 8px;
+  padding-right: 16px;
+  cursor: pointer;
+
+  &.active {
+    background: var(--border-dark-color);
+    color: var(--text-light-color);
+    border-radius: 100px;
+  }
+}

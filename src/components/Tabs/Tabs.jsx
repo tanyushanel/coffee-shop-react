@@ -2,11 +2,11 @@ import cx from "classnames";
 import { useState } from "react";
 import { ButtonRefresh } from "./ButtonRefresh/ButtonRefresh";
 import { Tab } from "./Tab/Tab";
-import { TabImg } from "./Tab/TabImg/TabImg";
+import { TabHeader } from "./Tab/TabHeader/TabHeader";
 import style from "./Tabs.module.scss";
 
 export const Tabs = ({ children }) => {
-  const [activeTab, setActiveTab] = useState(children[0].props.label);
+  const [activeTab, setActiveTab] = useState(children[0]?.props.label);
 
   const switchTab = (label) => {
     setActiveTab(label);
@@ -19,10 +19,10 @@ export const Tabs = ({ children }) => {
           const { label, src } = child.props;
 
           return (
-            <TabImg
+            <TabHeader
               src={src}
               category={label}
-              className={activeTab === label ? style.active : ""}
+              active={activeTab === label}
               onClick={() => switchTab(label)}
               key={label}
             />

@@ -3,8 +3,8 @@
 
   & .active {
     cursor: pointer;
-    color: var(--border-dark-color);
-    border: 1px solid var(--border-dark-color);
+    color: var(--text-light-color);
+    background: var(--border-dark-color);
     border-radius: 100px;
   }
 }
