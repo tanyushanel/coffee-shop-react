@@ -8,7 +8,7 @@ export const TabHeader = ({ src, category, active, onClick }) => {
       onClick={onClick}
       className={cx(
         style.tabHeader,
-        "medium-txt flex-center gap-8",
+        "medium-txt flex-center gap-8 button-secondary",
         active ? style.active : ""
       )}
     >

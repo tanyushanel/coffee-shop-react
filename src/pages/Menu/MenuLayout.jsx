@@ -1,9 +1,10 @@
 import { Tab } from "../../components/Tabs/Tab/Tab";
 import { tabImages } from "../../constants/data";
-import { Tabs } from "./../../components/Tabs/Tabs";
-import { Layout } from "./../../layouts/Layout";
+import { Tabs } from "../../components/Tabs/Tabs";
+import { Layout } from "../../layouts/Layout";
+import { Modal } from "./../../components/Modal/Modal";
 
-const Menu = () => {
+const MenuLayout = () => {
   return (
     <Layout>
       <main>
@@ -28,4 +29,4 @@ const Menu = () => {
     </Layout>
   );
 };
-export default Menu;
+export default MenuLayout;
