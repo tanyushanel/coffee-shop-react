@@ -1,14 +1,16 @@
 import cx from "classnames";
 import { useModal } from "../../../Modal/ModalContext";
+import { ProductModal } from "../../../Modal/ProductModal/ProductModal";
 import style from "./GridItem.module.scss";
 
 export const GridItem = ({ item }) => {
   const { openModal } = useModal();
+
   return (
     <>
       <li
         className={style.gridContainer}
-        onClick={() => openModal("Welcome to the Home Page!")}
+        onClick={() => openModal(<ProductModal product={item} />)}
       >
         <div className={style.gridImg}>
           <img className={style.scalable} src={item.src} alt="pic" />

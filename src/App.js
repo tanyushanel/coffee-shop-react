@@ -8,15 +8,17 @@ const Menu = lazy(() => import("./pages/Menu/MenuLayout"));
 
 function App() {
   return (
-    <div className="container">
+    <>
       <Modal />
-      <Suspense fallback={<Spinner />}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/menu" element={<Menu />} />
-        </Routes>
-      </Suspense>
-    </div>
+      <div className="container">
+        <Suspense fallback={<Spinner />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/menu" element={<Menu />} />
+          </Routes>
+        </Suspense>
+      </div>
+    </>
   );
 }
 
