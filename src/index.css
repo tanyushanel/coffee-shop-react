@@ -143,6 +143,10 @@ code {
   display: flex;
 }
 
+.flex-between {
+  justify-content: space-between;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;

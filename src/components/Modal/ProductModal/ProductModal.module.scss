@@ -1,0 +1,24 @@
+.productImg {
+  border-radius: 40px;
+  overflow: hidden;
+  min-width: 310px;
+  height: 310px;
+
+  .scalable {
+    object-fit: cover;
+    transform: scale(1.05);
+  }
+
+  & .scalable:hover {
+    transform: scale(1);
+    transition: ease-in 0.5s;
+  }
+}
+
+.productDesc {
+  flex-direction: column;
+}
+
+.button {
+  padding: 0.5rem;
+}

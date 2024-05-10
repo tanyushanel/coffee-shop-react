@@ -18,7 +18,7 @@ export const GridItem = ({ item }) => {
         <div className={cx(style.gridDesc, "margin-20 flex-center gap-12")}>
           <h4>{item.name}</h4>
           <p className="medium-txt cut">{item.description}</p>
-          <h4 className="price">{item.price}</h4>
+          <h4 className="price">${item.price}</h4>
         </div>
       </li>
     </>

@@ -2,6 +2,7 @@ import style from "./Modal.module.scss";
 import { useModal } from "./ModalContext";
 import FocusTrap from "focus-trap-react";
 import { useEffect } from "react";
+import cx from "classnames";
 
 export const Modal = () => {
   const { isModalOpen, modalContent, closeModal } = useModal();
@@ -19,9 +20,12 @@ export const Modal = () => {
   return (
     <FocusTrap active={isModalOpen} onClick={(e) => e.stopPropagation()}>
       <div className={style.overlay}>
-        <div className={style.modalContainer}>
+        <div className={cx(style.modalContainer, "flex gap-20")}>
           {modalContent}
-          <button className="button-secondary" onClick={closeModal}>
+          <button
+            className={cx(style.closeButton, "button-secondary")}
+            onClick={closeModal}
+          >
             Close
           </button>
         </div>
