@@ -2,13 +2,23 @@ import { useState } from "react";
 import cx from "classnames";
 import style from "./InputGroup.module.scss";
 
-export const RadioGroup = ({ product }) => {
+export const RadioGroup = ({ product, selectedOption, onOptionChange }) => {
   const sizes = Object.entries(product.sizes);
 
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState(selectedOption);
+
+  const handleOptionChangeValue = (target) => {
+    const priceForSize = sizes
+      .filter((item) => item[0] === target)
+      .map((item) => item[1]["add-price"]);
+
+    onOptionChange(...priceForSize);
+  };
 
   const handleChange = (event) => {
-    setSelected(event.target.value);
+    const target = event.target.value;
+    setSelected(target);
+    handleOptionChangeValue(target);
   };
 
   return (
@@ -31,12 +41,18 @@ export const RadioGroup = ({ product }) => {
             hidden
             checked={selected === size[0]}
           />
+
           <label htmlFor={index}>
             <span className={style.size}>{size[0]} </span>
             {size[1].size}
           </label>
         </li>
       ))}
+      {selectedOption !== "0.00" && (
+        <span className={cx(style.note, "caption-txt")}>
+          + ${selectedOption}
+        </span>
+      )}
     </ul>
   );
 };
