@@ -26,3 +26,14 @@
   width: 25rem;
   outline: none;
 }
+
+.cancelIcon {
+  position: fixed;
+  cursor: pointer;
+  top: 1rem;
+  right: 1.5rem;
+
+  &:hover {
+    transform: scale(1.125);
+  }
+}

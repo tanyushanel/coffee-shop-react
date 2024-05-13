@@ -1,0 +1,33 @@
+.button {
+  padding: 0.5rem 1rem;
+  min-width: 4rem;
+  margin: 0 0.25rem;
+  text-align: center;
+
+  &.active {
+    color: var(--border-light-color);
+    background: var(--border-dark-color);
+  }
+}
+
+.size {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: var(--bg-body-color);
+  text-transform: capitalize;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  position: absolute;
+}
+
+label {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}

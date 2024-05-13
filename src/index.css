@@ -41,6 +41,10 @@ code {
 
 /* FORMAT CLASSES */
 
+.material-symbols-outlined {
+  color: var(--border-dark-color);
+}
+
 .margin-100 {
   margin: 100px 0;
 }

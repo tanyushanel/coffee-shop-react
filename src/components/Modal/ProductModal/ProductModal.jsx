@@ -1,7 +1,16 @@
 import style from "./ProductModal.module.scss";
 import cx from "classnames";
+import { RadioGroup } from "../../InputGroup/RadioGroup";
+import { useState } from "react";
+import { CheckboxGroup } from "../../InputGroup/CheckboxGroup";
 
 export const ProductModal = ({ product }) => {
+  const [selectedOption, setSelectedOption] = useState("");
+
+  const handleOptionChange = (value) => {
+    setSelectedOption(value);
+    console.log(selectedOption);
+  };
   return (
     <div className="flex gap-20">
       <div className={style.productImg}>
@@ -9,38 +18,20 @@ export const ProductModal = ({ product }) => {
       </div>
 
       <div className={cx(style.productDesc, "flex gap-20")}>
-        <h4 className="modal-title ">{product.name}</h4>
-        <p className="modal-desc ">{product.description}</p>
+        <h4>{product.name}</h4>
+        <p>{product.description}</p>
         <section>
           <h5>Size</h5>
-          <ul className="margin-15">
-            <li className={cx(style.button, "button-secondary")}>
-              <span className={cx(style.button)}>S</span>
-              <span>{product.sizes.s.size}</span>
-            </li>
-            <li className={cx(style.button, "button-secondary")}>
-              <span className={cx(style.button)}>M</span>
-              <span>{product.sizes.m.size}</span>
-            </li>
-            <li className={cx(style.button, "button-secondary")}>
-              <span className={cx(style.button)}>L</span>
-              <span>{product.sizes.l.size}</span>
-            </li>
-          </ul>
+          <RadioGroup
+            product={product}
+            selected={selectedOption}
+            onOptionChange={handleOptionChange}
+          />
+          <div>Selected Option: {selectedOption}</div>
         </section>
         <section>
           <h5>Additives</h5>
-          <ul className="margin-15">
-            <li className={cx(style.button, "button-secondary")}>
-              <span>{product.additives[0].name}</span>
-            </li>
-            <li className={cx(style.button, "button-secondary")}>
-              <span>{product.additives[1].name}</span>
-            </li>
-            <li className={cx(style.button, "button-secondary")}>
-              <span>{product.additives[2].name}</span>
-            </li>
-          </ul>
+          <CheckboxGroup product={product} />
         </section>
         <section className="flex flex-between">
           <h4>Total:</h4>

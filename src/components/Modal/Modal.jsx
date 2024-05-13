@@ -21,6 +21,12 @@ export const Modal = () => {
     <FocusTrap active={isModalOpen} onClick={(e) => e.stopPropagation()}>
       <div className={style.overlay}>
         <div className={cx(style.modalContainer, "flex gap-20")}>
+          <span
+            className={cx(style.cancelIcon, "material-symbols-outlined")}
+            onClick={closeModal}
+          >
+            cancel
+          </span>
           {modalContent}
           <button
             className={cx(style.closeButton, "button-secondary")}
