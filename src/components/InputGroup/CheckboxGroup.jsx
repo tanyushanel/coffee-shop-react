@@ -30,7 +30,7 @@ export const CheckboxGroup = ({ product }) => {
             name="adds"
             value={index}
             hidden
-            onClick={handleCheck(index)}
+            onChange={handleCheck(index)}
             checked={checkedItems[index]}
           />
           <label htmlFor={add.name}>
