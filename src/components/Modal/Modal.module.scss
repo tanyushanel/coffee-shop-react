@@ -1,6 +1,5 @@
 .overlay {
   position: fixed;
-
   z-index: 98;
   width: 100%;
   height: 100%;
@@ -32,6 +31,7 @@
   cursor: pointer;
   top: 1rem;
   right: 1.5rem;
+  color: var(--border-dark-color);
 
   &:hover {
     transform: scale(1.125);

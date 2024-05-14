@@ -13,11 +13,11 @@
 
   .scalable {
     object-fit: cover;
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
 
   & .scalable:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
     transition: ease-in 0.5s;
   }
 }

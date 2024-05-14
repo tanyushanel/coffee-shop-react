@@ -2,11 +2,22 @@
   padding: 8px;
   padding-right: 16px;
   cursor: pointer;
-  border: none;
+  border: 1px solid var(--border-light-color);
 
   &.active {
     background: var(--border-dark-color);
     color: var(--text-light-color);
     border-radius: 100px;
+  }
+
+  .tabHeaderImg {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: scale-down;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    background: var(--border-light-color);
   }
 }

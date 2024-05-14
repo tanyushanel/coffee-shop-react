@@ -12,7 +12,7 @@ export const TabHeader = ({ src, category, active, onClick }) => {
         active ? style.active : ""
       )}
     >
-      <img src={src} alt="tabHeader" />
+      <img className={style.tabHeaderImg} src={src} alt="tabHeader" />
       <span className="capitalize">{category}</span>
     </li>
   );

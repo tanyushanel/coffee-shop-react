@@ -9,7 +9,11 @@ export const Header = () => {
       <div className={style.headerContent}>
         <h1 className="invisible">Resource Coffee House</h1>
         <Link to="/">
-          <img className="logo" src="assets/icons/logo.svg" alt="logo" />
+          <img
+            className="logo"
+            src={`${process.env.PUBLIC_URL}/assets/icons/logo.svg`}
+            alt="logo"
+          />
         </Link>
 
         <Navbar />

@@ -42,14 +42,14 @@ export const RadioGroup = ({ product, selectedOption, onOptionChange }) => {
             checked={selected === size[0]}
           />
 
-          <label htmlFor={index}>
-            <span className={style.size}>{size[0]} </span>
+          <label className="flex center gap-10" htmlFor={index}>
+            <span className={cx(style.size, "flex center")}>{size[0]} </span>
             {size[1].size}
           </label>
         </li>
       ))}
       {selectedOption !== "0.00" && (
-        <span className={cx(style.note, "caption-txt")}>
+        <span className={cx(style.note, "caption-txt flex center")}>
           + ${selectedOption}
         </span>
       )}

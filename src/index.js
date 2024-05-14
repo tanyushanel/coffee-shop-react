@@ -6,11 +6,16 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { ModalProvider } from "./components/Modal/ModalContext";
 
+const basename = process.env.PUBLIC_URL || "";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
+console.log("PUBLIC_URL:", process.env.PUBLIC_URL);
+
+console.log("PUBLIC_URL:", basename);
 root.render(
   <React.StrictMode>
     <ModalProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <App />
       </BrowserRouter>
     </ModalProvider>

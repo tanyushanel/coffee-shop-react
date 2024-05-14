@@ -19,7 +19,7 @@ const VideoLoader = ({ src }) => (
 export const Intro = () => {
   return (
     <article id="intro" className={style.bannerContainer}>
-      <VideoLoader src="assets/video.mp4" />
+      <VideoLoader src={`${process.env.PUBLIC_URL}/assets/video.mp4`} />
       <div className={style.bannerDesc}>
         <h2 className="light-color">
           <span className="accent-txt">Enjoy</span> premium coffee at our

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Navigation } from "../../constants/Navigation";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import style from "./Navbar.module.scss";
+import { HashLink } from "react-router-hash-link";
 
 export const Navbar = () => {
   const nav = Object.values(Navigation);
@@ -31,9 +32,9 @@ export const Navbar = () => {
           {nav.map(({ href, name }) => {
             return (
               <li key={href} className={cx(style.menuItem, "pompiere-font")}>
-                <a href={href} onClick={onMenuClose}>
+                <HashLink to={href} onClick={onMenuClose}>
                   {name}
-                </a>
+                </HashLink>
               </li>
             );
           })}
@@ -43,7 +44,7 @@ export const Navbar = () => {
       <img
         className={style.burgerMenuButton}
         onClick={onMenuToggle}
-        src="assets/icons/button-icon-burger.svg"
+        src={`${process.env.PUBLIC_URL}/assets/icons/button-icon-burger.svg`}
         alt="burger-menu-pic"
       />
     </nav>

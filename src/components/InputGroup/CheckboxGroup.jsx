@@ -33,8 +33,8 @@ export const CheckboxGroup = ({ product }) => {
             onChange={handleCheck(index)}
             checked={checkedItems[index]}
           />
-          <label htmlFor={add.name}>
-            <span className={cx(style.size)}>{index + 1}.</span>
+          <label className="flex center gap-10" htmlFor={add.name}>
+            <span className={cx(style.size, "flex center")}>{index + 1}.</span>
             <span>{add.name}</span>
           </label>
         </li>
