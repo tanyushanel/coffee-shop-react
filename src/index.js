@@ -9,9 +9,7 @@ import { ModalProvider } from "./components/Modal/ModalContext";
 const basename = process.env.PUBLIC_URL || "";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-console.log("PUBLIC_URL:", process.env.PUBLIC_URL);
 
-console.log("PUBLIC_URL:", basename);
 root.render(
   <React.StrictMode>
     <ModalProvider>
