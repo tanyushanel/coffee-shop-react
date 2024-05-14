@@ -6,19 +6,19 @@ export const tabImages = [
 
 export const sliderImages = [
   {
-    src: "assets/pics/coffee-slider-1.png",
+    src: `${process.env.PUBLIC_URL}/assets/pics/coffee-slider-1.png`,
     name: "S’mores Frappuccino",
     desc: "This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk",
     price: "$5.50",
   },
   {
-    src: "assets/pics/coffee-slider-2.png",
+    src: `${process.env.PUBLIC_URL}/assets/pics/coffee-slider-2.png`,
     name: "Caramel macchiato",
     desc: "Fragrant black coffee with Jameson Irish whiskey and whipped milk",
     price: "$7.50",
   },
   {
-    src: "assets/pics/coffee-slider-3.png",
+    src: `${process.env.PUBLIC_URL}/assets/pics/coffee-slider-3.png`,
     name: "Ice coffee",
     desc: "Classic coffee with milk and Kahlua liqueur under a cap of frothed milk",
     price: "$9.50",
