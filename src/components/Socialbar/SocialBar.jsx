@@ -7,19 +7,19 @@ export const SocialBar = () => {
         href="https://twitter.com/ApexFacility"
         className={cx(style.socialButton, "flex-center button-secondary")}
       >
-        <img src="/assets/icons/tweet.svg" alt="tweet-pic" />
+        <img src="assets/icons/tweet.svg" alt="tweet-pic" />
       </a>
       <a
         href="https://www.instagram.com/resourcecoffeeshop/?hl=en"
         className={cx(style.socialButton, "flex-center button-secondary")}
       >
-        <img src="/assets/icons/instagram.svg" alt="inst-pic" />
+        <img src="assets/icons/instagram.svg" alt="inst-pic" />
       </a>
       <a
         href="https://www.facebook.com/profile.php?id=100093654309099"
         className={cx(style.socialButton, "flex-center button-secondary")}
       >
-        <img src="/assets/icons/fb.svg" alt="fb-pic" />
+        <img src="assets/icons/fb.svg" alt="fb-pic" />
       </a>
     </div>
   );

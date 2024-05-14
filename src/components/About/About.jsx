@@ -14,28 +14,28 @@ export const About = () => {
         <li className={style.gridItem}>
           <img
             className={style.scalable}
-            src="/assets/pics/about-1.jpg"
+            src="assets/pics/about-1.jpg"
             alt="pic"
           />
         </li>
         <li className={style.gridItem}>
           <img
             className={style.scalable}
-            src="/assets/pics/about-2.jpg"
+            src="assets/pics/about-2.jpg"
             alt="pic"
           />
         </li>
         <li className={style.gridItem}>
           <img
             className={style.scalable}
-            src="/assets/pics/about-3.jpg"
+            src="assets/pics/about-3.jpg"
             alt="pic"
           />
         </li>
         <li className={style.gridItem}>
           <img
             className={style.scalable}
-            src="/assets/pics/about-4.jpg"
+            src="assets/pics/about-4.jpg"
             alt="pic"
           />
         </li>

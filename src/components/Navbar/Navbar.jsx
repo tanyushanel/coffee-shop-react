@@ -43,7 +43,7 @@ export const Navbar = () => {
       <img
         className={style.burgerMenuButton}
         onClick={onMenuToggle}
-        src="/assets/icons/button-icon-burger.svg"
+        src="assets/icons/button-icon-burger.svg"
         alt="burger-menu-pic"
       />
     </nav>
