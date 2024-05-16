@@ -2,8 +2,10 @@ import { useState } from "react";
 import cx from "classnames";
 import style from "./InputGroup.module.scss";
 
-export const CheckboxGroup = ({ product }) => {
+export const CheckboxGroup = ({ product, onOptionChange }) => {
   const adds = product.additives;
+
+  const [selected, setSelected] = useState("0.00");
 
   const [checkedItems, setCheckedItems] = useState(
     new Array(adds.length).fill(false)
@@ -12,7 +14,26 @@ export const CheckboxGroup = ({ product }) => {
   const handleCheck = (index) => () => {
     const updatedCheckedItems = [...checkedItems];
     updatedCheckedItems[index] = !updatedCheckedItems[index];
+
     setCheckedItems(updatedCheckedItems);
+    handleCheckboxSumValue(updatedCheckedItems);
+  };
+
+  const handleCheckboxSumValue = (arr) => {
+    const checkedValues = arr
+      .map((item, index) => {
+        return item ? adds[index] : "";
+      })
+      .filter((item) => item);
+
+    const sumValue = checkedValues.reduce(
+      (sum, curr) => (sum += +curr["add-price"]),
+      0
+    );
+
+    console.log(sumValue);
+    onOptionChange(sumValue);
+    setSelected(sumValue);
   };
 
   return (
@@ -39,6 +60,11 @@ export const CheckboxGroup = ({ product }) => {
           </label>
         </li>
       ))}
+      {selected !== "0.00" && (
+        <span className={cx(style.note, "caption-txt flex center")}>
+          + $ {selected}
+        </span>
+      )}
     </ul>
   );
 };

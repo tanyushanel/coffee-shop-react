@@ -50,7 +50,7 @@ export const RadioGroup = ({ product, selectedOption, onOptionChange }) => {
       ))}
       {selectedOption !== "0.00" && (
         <span className={cx(style.note, "caption-txt flex center")}>
-          + ${selectedOption}
+          + $ {selectedOption}
         </span>
       )}
     </ul>

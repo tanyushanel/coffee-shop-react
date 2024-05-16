@@ -5,13 +5,20 @@ import { useState } from "react";
 import { CheckboxGroup } from "../../InputGroup/CheckboxGroup";
 
 export const ProductModal = ({ product }) => {
-  const partPrice = product.sizes.s["add-price"];
-  const [selectedOption, setSelectedOption] = useState(partPrice);
+  const partPriceFromRadio = product.sizes.s["add-price"];
+  const [selectedRadioOption, setSelectedRadioOption] =
+    useState(partPriceFromRadio);
+
+  const [selectedCheckboxOption, setSelectedCheckboxOption] = useState(0);
 
   const [total, setTotal] = useState(product.price);
 
-  const handleOptionChange = (value) => {
-    setSelectedOption(value);
+  const handleRadioOptionChange = (value) => {
+    setSelectedRadioOption(value);
+  };
+
+  const handleCheckboxOptionChange = (value) => {
+    setSelectedCheckboxOption(value);
   };
   return (
     <div className="flex gap-20">
@@ -27,14 +34,18 @@ export const ProductModal = ({ product }) => {
 
           <RadioGroup
             product={product}
-            selectedOption={selectedOption}
-            onOptionChange={handleOptionChange}
+            selectedOption={selectedRadioOption}
+            onOptionChange={handleRadioOptionChange}
           />
         </section>
         <section>
           <h5>Additives</h5>
 
-          <CheckboxGroup product={product} />
+          <CheckboxGroup
+            product={product}
+            selectedOption={selectedCheckboxOption}
+            onOptionChange={handleCheckboxOptionChange}
+          />
         </section>
         <section className="flex flex-between">
           <h4>Total:</h4>
