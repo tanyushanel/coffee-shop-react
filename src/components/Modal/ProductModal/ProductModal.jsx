@@ -1,17 +1,15 @@
 import style from "./ProductModal.module.scss";
 import cx from "classnames";
 import { RadioGroup } from "../../InputGroup/RadioGroup";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CheckboxGroup } from "../../InputGroup/CheckboxGroup";
 
 export const ProductModal = ({ product }) => {
-  const partPriceFromRadio = product.sizes.s["add-price"];
-  const [selectedRadioOption, setSelectedRadioOption] =
-    useState(partPriceFromRadio);
+  const [selectedRadioOption, setSelectedRadioOption] = useState(0);
 
   const [selectedCheckboxOption, setSelectedCheckboxOption] = useState(0);
 
-  const [total, setTotal] = useState(product.price);
+  const [total, setTotal] = useState(+product.price);
 
   const handleRadioOptionChange = (value) => {
     setSelectedRadioOption(value);
@@ -20,6 +18,13 @@ export const ProductModal = ({ product }) => {
   const handleCheckboxOptionChange = (value) => {
     setSelectedCheckboxOption(value);
   };
+
+  useEffect(() => {
+    const newTotal =
+      +product.price + +selectedRadioOption + +selectedCheckboxOption;
+    setTotal(+newTotal);
+  }, [product.price, selectedRadioOption, selectedCheckboxOption]);
+
   return (
     <div className="flex gap-20">
       <div className={style.productImg}>
@@ -60,7 +65,7 @@ export const ProductModal = ({ product }) => {
             </span>
           </div>
 
-          <h4>${total}</h4>
+          <h4>${total.toFixed(2)}</h4>
         </section>
         <section className="flex gap-8 caption-txt">
           <span className="material-symbols-outlined">info</span>

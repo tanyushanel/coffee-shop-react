@@ -5,13 +5,13 @@ import style from "./InputGroup.module.scss";
 export const CheckboxGroup = ({ product, onOptionChange }) => {
   const adds = product.additives;
 
-  const [selected, setSelected] = useState("0.00");
+  const [selected, setSelected] = useState(0);
 
   const [checkedItems, setCheckedItems] = useState(
     new Array(adds.length).fill(false)
   );
 
-  const handleCheck = (index) => () => {
+  const handleChecked = (index) => () => {
     const updatedCheckedItems = [...checkedItems];
     updatedCheckedItems[index] = !updatedCheckedItems[index];
 
@@ -31,7 +31,6 @@ export const CheckboxGroup = ({ product, onOptionChange }) => {
       0
     );
 
-    console.log(sumValue);
     onOptionChange(sumValue);
     setSelected(sumValue);
   };
@@ -51,7 +50,7 @@ export const CheckboxGroup = ({ product, onOptionChange }) => {
             name="adds"
             value={index}
             hidden
-            onChange={handleCheck(index)}
+            onChange={handleChecked(index)}
             checked={checkedItems[index]}
           />
           <label className="flex center gap-10" htmlFor={add.name}>
@@ -60,7 +59,7 @@ export const CheckboxGroup = ({ product, onOptionChange }) => {
           </label>
         </li>
       ))}
-      {selected !== "0.00" && (
+      {selected !== 0 && (
         <span className={cx(style.note, "caption-txt flex center")}>
           + $ {selected}
         </span>

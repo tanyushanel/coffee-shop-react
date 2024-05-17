@@ -5,19 +5,20 @@ import style from "./InputGroup.module.scss";
 export const RadioGroup = ({ product, selectedOption, onOptionChange }) => {
   const sizes = Object.entries(product.sizes);
 
-  const [selected, setSelected] = useState(selectedOption);
+  const [selectedSize, setSelectedSize] = useState(selectedOption);
 
   const handleOptionChangeValue = (target) => {
     const priceForSize = sizes
       .filter((item) => item[0] === target)
-      .map((item) => item[1]["add-price"]);
+      .map((item) => +item[1]["add-price"]);
 
     onOptionChange(...priceForSize);
   };
 
   const handleChange = (event) => {
     const target = event.target.value;
-    setSelected(target);
+
+    setSelectedSize(target);
     handleOptionChangeValue(target);
   };
 
@@ -29,7 +30,7 @@ export const RadioGroup = ({ product, selectedOption, onOptionChange }) => {
           className={cx(
             style.button,
             "button-secondary",
-            selected === size[0] ? style.active : ""
+            selectedSize === size[0] ? style.active : ""
           )}
         >
           <input
@@ -39,7 +40,7 @@ export const RadioGroup = ({ product, selectedOption, onOptionChange }) => {
             value={size[0]}
             onChange={handleChange}
             hidden
-            checked={selected === size[0]}
+            checked={selectedSize === size[0]}
           />
 
           <label className="flex center gap-10" htmlFor={index}>
@@ -48,7 +49,7 @@ export const RadioGroup = ({ product, selectedOption, onOptionChange }) => {
           </label>
         </li>
       ))}
-      {selectedOption !== "0.00" && (
+      {selectedOption !== 0 && (
         <span className={cx(style.note, "caption-txt flex center")}>
           + $ {selectedOption}
         </span>
